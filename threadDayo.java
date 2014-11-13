@@ -28,9 +28,9 @@ public class threadDayo implements Runnable {
 
 	
 	
-	public threadDayo(String threadName,Browser browser,JEditorPane editorPane,JTextField txtURL,JTextArea txtrHeader,JTextArea tt){
+	public threadDayo(String threadName,JEditorPane editorPane,JTextField txtURL,JTextArea txtrHeader,JTextArea tt){ //accept Browser browser
 		this.threadName = threadName;
-		this.browser = browser;
+		//this.browser = browser;
 		this.editorPane = editorPane;
 		this.txtURL = txtURL;
 		this.txtrHeader = txtrHeader;

@@ -1,10 +1,10 @@
 package browserStuff;
 
 
-import com.teamdev.jxbrowser.chromium.BeforeSendHeadersParams;
+/*import com.teamdev.jxbrowser.chromium.BeforeSendHeadersParams;
 import com.teamdev.jxbrowser.chromium.Browser;
 import com.teamdev.jxbrowser.chromium.BrowserContext;
-import com.teamdev.jxbrowser.chromium.BrowserFactory;
+import com.teamdev.jxbrowser.chromium.BrowserFactory;*/
 
 import java.awt.EventQueue;
 
@@ -52,8 +52,8 @@ public class browsr {
 	private void initialize() {
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(169, 169, 169));
-		final Browser browser = BrowserFactory.create(); 
-		final Browser browser_2 = BrowserFactory.create();
+		/*final Browser browser = BrowserFactory.create(); 
+		final Browser browser_2 = BrowserFactory.create();*/
 		
 		frame.setResizable(false);
 		frame.setTitle("Vasut Pongsattayapipat s5050453@kmitl.ac.th - Java Web Browser (Network Programming Class Assignment #2)");
@@ -67,8 +67,8 @@ public class browsr {
 			public void actionPerformed(ActionEvent arg0) {
 				txtrHeader.setText("");
 				txtrHea.setText("");
-				threadDayo a = new threadDayo("Thread I",browser,editorPane,txtURL,txtrHea,txtrHea);
-				threadDayo b = new threadDayo("Thread II",browser_2,editorPane_1,txtURL_2,txtrHeader,txtrHea);
+				threadDayo a = new threadDayo("Thread I",editorPane,txtURL,txtrHea,txtrHea); //push browser to thread
+				threadDayo b = new threadDayo("Thread II",editorPane_1,txtURL_2,txtrHeader,txtrHea); //push browser_2 to thread
 				a.start();
 				//browser.loadURL(txtURL.getText());
 				b.start();
@@ -83,7 +83,7 @@ public class browsr {
 		frame.getContentPane().add(txtURL);
 		txtURL.setColumns(10);
 		
-		txtURL_2 = new JTextField("www.fakku.net");
+		txtURL_2 = new JTextField("www.facebook.com");
 		txtURL_2.setBounds(647, 12, 508, 20);
 		frame.getContentPane().add(txtURL_2);
 		txtURL_2.setColumns(10);
